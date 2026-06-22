@@ -19,6 +19,7 @@ body {
     background-color: #35cfc7;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 12px 10px 5px rgba(0, 0, 0, 0.2);
     
 }
 .calculator input{
@@ -29,12 +30,23 @@ body {
     height: 65px;
     border-radius: 10px;
     margin: 5px;
-    color:blueviolet;
+    
     background:transparent;
     font-size: 20px; 
-    box-shadow: -8px -8px 15px rgba(58, 57, 57, 0.2), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    box-shadow: 12px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.calculator input:hover {
+    background-color: rgb(241, 255, 40);
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 
 }
+
+
+    
 
 .display {
     display: flex;
@@ -62,30 +74,38 @@ form input.equal {
 }
 
 .clear {
-    color: red;
+    color: rgb(212, 38, 38);
 }
 
 .delete {
-    color: orange;
+    color: rgb(114, 36, 218);
 }
 
+.equal {
+    color:darkgreen;
+    font-weight: bold;
+}
 .decimal {
-    color: green;
+    color: blue;
+    font-weight: bold;
 }
 
 .divide {
     color: blue;
+    font-weight: bold;
 }
 
 .multiply {
     color: blue;
+    font-weight: bold;
 }
 
 .add {
     color: blue;
+    font-weight: bold;
 }
 
 .subtract {
-    color: blue;
+    color: rgb(0, 0, 255);
+    font-weight: bold;
 }
-
