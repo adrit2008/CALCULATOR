@@ -1,1 +1,28 @@
- /* code will add soon */
+const display = document.getElementById("Display");
+
+function appendToDisplay(input) {
+    display.value += input;
+}
+
+function clearDisplay() {
+    display.value = '';
+}
+
+function deleteLast() {
+    display.value = display.value.slice(0, -1);
+}
+
+function calculate() {
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = "Error";
+    }
+}
+
+display.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // Extra backup to stop page reload
+        calculate();            // Runs your math
+    }
+});
