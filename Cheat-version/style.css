@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #292929;
+   
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    
+    
+} 
+
+.calculator {
+    background-color: #35cfc7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 12px 10px 5px rgba(0, 0, 0, 0.2);
+     padding-left: 10px;
+    padding-right: 0px;
+
+    
+ 
+}
+.calculator button{
+    border:0;
+    outline:0;
+    cursor:pointer;
+    width: 60px;
+    height: 65px;
+    border-radius: 10px;
+    margin: 5px;
+   
+    
+    background:transparent;
+    font-size: 20px; 
+    
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    box-shadow: 12px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.calculator button:hover {
+    background-color: rgb(241, 255, 40);
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2), inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+#Display{
+    flex:auto;
+    box-shadow: none;
+    text-align: right;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    background: transparent;
+    border:none;
+    width: 85%;
+    height: 50px;
+
+     caret-color: black; /* Makes the blinking text cursor invisible */
+    
+
+    font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style:normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+
+      transition: transform 0.3s ease, box-shadow 0.2s ease;
+
+    
+}
+
+
+#Display:hover {
+    background-color: rgb(241, 255, 40);
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2),  5px 5px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+#Display:focus {
+    outline: none; /* Removes the default blue/black browser border */
+}
+
+form button.doublezero {
+    width: 21%;
+}
+
+form button.zero {
+    width: 21%;
+}
+
+form button.equal {
+    width: 37%;
+}
+
+.clear {
+    color: rgb(212, 38, 38);
+}
+
+.delete {
+    color: rgb(114, 36, 218);
+}
+
+.equal {
+    color:darkgreen;
+    font-weight: bold;
+}
+.decimal {
+    color: blue;
+    font-weight: bold;
+}
+
+.divide {
+    color: blue;
+    font-weight: bold;
+}
+
+.multiply {
+    color: blue;
+    font-weight: bold;
+}
+
+.add {
+    color: blue;
+    font-weight: bold;
+}
+
+.subtract {
+    color: rgb(0, 0, 255);
+    font-weight: bold;
+}
+
+.switch { position: relative; display: inline-block; width: 46px; height: 24px; }
+.switch input { display: none; }
+.slider {
+  position: absolute; inset: 0; cursor: pointer;
+  background: #555; border-radius: 24px; transition: .3s;
+}
+.slider::before {
+  content: ""; position: absolute; width: 18px; height: 18px;
+  left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: .3s;
+}
+input:checked + .slider { background: #e53935; }
+input:checked + .slider::before { transform: translateX(22px); }
